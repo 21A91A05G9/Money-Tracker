@@ -7,7 +7,7 @@ function Transactions() {
   const [Trandata,setTData] = useState([]);
   const [inc,setInc] = useState(0);
   useEffect(()=>{
-        axios.get('https://money-tracker-lac-seven.vercel.app//transactions')
+        axios.get('https://money-tracker-backend-mu.vercel.app/transactions')
         .then(res=>{
             const sortedData = res.data.sort((a, b) => { return new Date(b.date) - new Date(a.date); });     
             setTData(sortedData)
