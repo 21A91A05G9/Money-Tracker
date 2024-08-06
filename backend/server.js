@@ -12,7 +12,7 @@ app.use(express.json())
 // Allow only specific origins
 // const allowedOrigins = ['http://localhost:3000', 'https://money-tracker-front-xi.vercel.app'];
 app.use(cors({
-  origin: ['https://e-leave-hub-frontend.vercel.app','http://localhost:3000'], // Allow requests from this origin
+  origin: ['https://money-tracker-frontend-theta.vercel.app','http://localhost:3000'], // Allow requests from this origin
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true // Enable set cookie from the server
 }));
