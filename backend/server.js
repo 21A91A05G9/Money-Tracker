@@ -10,7 +10,7 @@ const port = 5001;
 app.use(express.json())
 
 // Allow only specific origins
-const allowedOrigins = ['http://localhost:3000', '*'];
+const allowedOrigins = ['http://localhost:3000', 'https://money-tracker-front-xi.vercel.app'];
 app.use(cors({
   origin: ['http://localhost:3000','https://e-leave-hub-frontend.vercel.app'], // Allow requests from this origin
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
