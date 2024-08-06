@@ -16,7 +16,7 @@ const resetDecide = () => {
 
 
 useEffect(()=>{
-        axios.get('https://money-tracker-lac-seven.vercel.app//transactions')
+        axios.get('https://money-tracker-backend-mu.vercel.app/transactions')
         .then(res=>{
             const sortedData = res.data.sort((a, b) => { return new Date(b.date) - new Date(a.date); });     
             setTData(sortedData);
@@ -38,7 +38,7 @@ const deleteHandler = (id)=> {
 
     console.log("Delete item with id " + id);
 
-    axios.delete('https://money-tracker-lac-seven.vercel.app//transactions/'+id)
+    axios.delete('https://money-tracker-backend-mu.vercel.app/transactions/'+id)
     .then(response => {
       console.log("Item deleted successfully");
       
