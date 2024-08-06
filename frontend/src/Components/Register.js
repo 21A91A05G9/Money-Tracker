@@ -18,7 +18,7 @@ function Register() {
       window.alert("Please Enter All Details.");
     } else {
       try {
-        const response = await axios.post('https://money-tracker-lac-seven.vercel.app//post', data);
+        const response = await axios.post('https://money-tracker-backend-mu.vercel.app/post', data);
         console.log('Request sent:', response.data);
         window.alert('Registered Successfully');
         navigate('/'); 
