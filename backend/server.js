@@ -11,17 +11,22 @@ app.use(express.json())
 
 // Allow only specific origins
 const allowedOrigins = ['http://localhost:3000', '*'];
-
 app.use(cors({
-  origin: function (origin, callback) {
-    // Check if the request origin is allowed
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  }
+  origin: ['http://localhost:3000','https://e-leave-hub-frontend.vercel.app'], // Allow requests from this origin
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true // Enable set cookie from the server
 }));
+
+// app.use(cors({
+//   origin: function (origin, callback) {
+//     // Check if the request origin is allowed
+//     if (!origin || allowedOrigins.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   }
+// }));
 
 app.listen(port, ()=> console.log(`server running in port ${port}`))
 
