@@ -18,7 +18,7 @@ function Login() {
     } 
     else {
       try {
-        const response = await axios.post('https://money-tracker-lac-seven.vercel.app//validate', data);
+        const response = await axios.post('https://money-tracker-backend-mu.vercel.app/validate', data);
         console.log('Request sent:', response.data);
         navigate('/home/'+response.data);
       } catch (error) {
